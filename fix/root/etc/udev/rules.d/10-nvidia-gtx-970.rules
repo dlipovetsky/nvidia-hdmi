@@ -1,0 +1,7 @@
+SUBSYSTEM!="sound", GOTO="pulseaudio_end"
+ACTION!="change", GOTO="pulseaudio_end"
+KERNEL!="card*", GOTO="pulseaudio_end"
+
+SUBSYSTEMS=="pci", RESULT=="?*", ATTRS{vendor}=="0x10de", ATTRS{device}=="0x13c2", ENV{PULSE_PROFILE_SET}="nvidia-gtx-970.conf"
+
+LABEL="pulseaudio_end"

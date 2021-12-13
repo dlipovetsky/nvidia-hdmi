@@ -1,0 +1,5 @@
+Found "default" metadata 33
+update: id:0 key:'default.configured.audio.sink' value:'{ "name": "alsa_output.pci-0000_07_00.1.hdmi-stereo-extra1" }' type:'Spa:String:JSON'
+update: id:0 key:'default.audio.sink' value:'{ "name": "alsa_output.pci-0000_07_00.1.hdmi-stereo-extra1" }' type:'Spa:String:JSON'
+update: id:0 key:'default.audio.source' value:'{ "name": "alsa_input.usb-046d_HD_Pro_Webcam_C920_0FD2D4BF-02.analog-stereo" }' type:'Spa:String:JSON'
+update: id:0 key:'default.video.source' value:'{ "name": "v4l2_input.pci-0000_02_00.0-usb-0_10_1.0" }' type:'Spa:String:JSON'

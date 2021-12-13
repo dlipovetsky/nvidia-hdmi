@@ -1,0 +1,1081 @@
+Module #1
+	Name: libpipewire-module-rtkit
+	Argument: {
+            #nice.level   = -11
+            #rt.prio      = 88
+            #rt.time.soft = 2000000
+            #rt.time.hard = 2000000
+        }
+	Usage counter: n/a
+	Properties:
+		module.name = "libpipewire-module-rtkit"
+		object.id = "1"
+		module.author = "Wim Taymans <wim.taymans@gmail.com>"
+		module.description = "Use RTKit to raise thread priorities"
+		module.usage = "[nice.level=<priority: default -11>] [rt.prio=<priority: default 88>] [rt.time.soft=<in usec: default 2000000] [rt.time.hard=<in usec: default 2000000] "
+		module.version = "0.3.40"
+
+Module #2
+	Name: libpipewire-module-protocol-native
+	Argument: 
+	Usage counter: n/a
+	Properties:
+		module.name = "libpipewire-module-protocol-native"
+		object.id = "2"
+		module.author = "Wim Taymans <wim.taymans@gmail.com>"
+		module.description = "Native protocol using unix sockets"
+		module.version = "0.3.40"
+
+Module #3
+	Name: libpipewire-module-profiler
+	Argument: 
+	Usage counter: n/a
+	Properties:
+		module.name = "libpipewire-module-profiler"
+		object.id = "3"
+		module.author = "Wim Taymans <wim.taymans@gmail.com>"
+		module.description = "Generate Profiling data"
+		module.version = "0.3.40"
+
+Module #5
+	Name: libpipewire-module-metadata
+	Argument: 
+	Usage counter: n/a
+	Properties:
+		module.name = "libpipewire-module-metadata"
+		object.id = "5"
+		module.author = "Wim Taymans <wim.taymans@gmail.com>"
+		module.description = "Allow clients to create metadata store"
+		module.version = "0.3.40"
+
+Module #7
+	Name: libpipewire-module-spa-device-factory
+	Argument: 
+	Usage counter: n/a
+	Properties:
+		module.name = "libpipewire-module-spa-device-factory"
+		object.id = "7"
+		module.author = "Wim Taymans <wim.taymans@gmail.com>"
+		module.description = "Provide a factory to make SPA devices"
+		module.version = "0.3.40"
+
+Module #9
+	Name: libpipewire-module-spa-node-factory
+	Argument: 
+	Usage counter: n/a
+	Properties:
+		module.name = "libpipewire-module-spa-node-factory"
+		object.id = "9"
+		module.author = "Wim Taymans <wim.taymans@gmail.com>"
+		module.description = "Provide a factory to make SPA nodes"
+		module.version = "0.3.40"
+
+Module #11
+	Name: libpipewire-module-client-node
+	Argument: 
+	Usage counter: n/a
+	Properties:
+		module.name = "libpipewire-module-client-node"
+		object.id = "11"
+		module.author = "Wim Taymans <wim.taymans@gmail.com>"
+		module.description = "Allow clients to create and control remote nodes"
+		module.version = "0.3.40"
+
+Module #13
+	Name: libpipewire-module-client-device
+	Argument: 
+	Usage counter: n/a
+	Properties:
+		module.name = "libpipewire-module-client-device"
+		object.id = "13"
+		module.author = "Wim Taymans <wim.taymans@gmail.com>"
+		module.description = "Allow clients to create and control remote devices"
+		module.version = "0.3.40"
+
+Module #15
+	Name: libpipewire-module-portal
+	Argument: 
+	Usage counter: n/a
+	Properties:
+		module.name = "libpipewire-module-portal"
+		object.id = "15"
+
+Module #16
+	Name: libpipewire-module-access
+	Argument: {
+            # access.allowed to list an array of paths of allowed
+            # apps.
+            #access.allowed = [
+            #    /usr/bin/pipewire-media-session
+            #]
+
+            # An array of rejected paths.
+            #access.rejected = [ ]
+
+            # An array of paths with restricted access.
+            #access.restricted = [ ]
+
+            # Anything not in the above lists gets assigned the
+            # access.force permission.
+            #access.force = flatpak
+        }
+	Usage counter: n/a
+	Properties:
+		module.name = "libpipewire-module-access"
+		object.id = "16"
+		module.author = "Wim Taymans <wim.taymans@gmail.com>"
+		module.description = "Perform access check"
+		module.usage = "[ access.force=flatpak ] [ access.allowed=<cmd-line> ] [ access.rejected=<cmd-line> ] [ access.restricted=<cmd-line> ] "
+		module.version = "0.3.40"
+
+Module #17
+	Name: libpipewire-module-adapter
+	Argument: 
+	Usage counter: n/a
+	Properties:
+		module.name = "libpipewire-module-adapter"
+		object.id = "17"
+		module.author = "Wim Taymans <wim.taymans@gmail.com>"
+		module.description = "Manage adapter nodes"
+		module.version = "0.3.40"
+
+Module #19
+	Name: libpipewire-module-link-factory
+	Argument: 
+	Usage counter: n/a
+	Properties:
+		module.name = "libpipewire-module-link-factory"
+		object.id = "19"
+		module.author = "Wim Taymans <wim.taymans@gmail.com>"
+		module.description = "Allow clients to create links"
+		module.version = "0.3.40"
+
+Module #21
+	Name: libpipewire-module-session-manager
+	Argument: 
+	Usage counter: n/a
+	Properties:
+		module.name = "libpipewire-module-session-manager"
+		object.id = "21"
+		module.author = "George Kiagiadakis <george.kiagiadakis@collabora.com>"
+		module.description = "Implements objects for session management"
+		module.version = "0.3.40"
+
+Sink #57
+	State: SUSPENDED
+	Name: alsa_output.pci-0000_09_00.4.iec958-stereo
+	Description: Starship/Matisse HD Audio Controller Digital Stereo (IEC958)
+	Driver: PipeWire
+	Sample Specification: s16le 2ch 48000Hz
+	Channel Map: front-left,front-right
+	Owner Module: 4294967295
+	Mute: no
+	Volume: front-left: 28093 /  43% / -22.07 dB,   front-right: 28093 /  43% / -22.07 dB
+	        balance 0.00
+	Base Volume: 65536 / 100% / 0.00 dB
+	Monitor Source: alsa_output.pci-0000_09_00.4.iec958-stereo.monitor
+	Latency: 0 usec, configured 0 usec
+	Flags: HARDWARE HW_MUTE_CTRL DECIBEL_VOLUME LATENCY SET_FORMATS 
+	Properties:
+		object.path = "alsa:pcm:2:iec958:2:playback"
+		api.alsa.path = "iec958:2"
+		api.alsa.pcm.card = "2"
+		api.alsa.pcm.stream = "playback"
+		audio.channels = "2"
+		audio.position = "FL,FR"
+		device.routes = "1"
+		alsa.resolution_bits = "16"
+		device.api = "alsa"
+		device.class = "sound"
+		alsa.class = "generic"
+		alsa.subclass = "generic-mix"
+		alsa.name = "ALC1220 Digital"
+		alsa.id = "ALC1220 Digital"
+		alsa.subdevice = "0"
+		alsa.subdevice_name = "subdevice #0"
+		alsa.device = "1"
+		alsa.card = "2"
+		alsa.card_name = "HD-Audio Generic"
+		alsa.long_card_name = "HD-Audio Generic at 0xfc800000 irq 135"
+		alsa.driver_name = "snd_hda_intel"
+		device.profile.name = "iec958-stereo"
+		device.profile.description = "Digital Stereo (IEC958)"
+		card.profile.device = "11"
+		device.id = "42"
+		factory.name = "api.alsa.pcm.sink"
+		priority.driver = "608"
+		priority.session = "608"
+		media.class = "Audio/Sink"
+		node.nick = "HD-Audio Generic"
+		node.name = "alsa_output.pci-0000_09_00.4.iec958-stereo"
+		device.description = "Starship/Matisse HD Audio Controller Digital Stereo (IEC958)"
+		device.icon_name = "audio-card-iec958"
+		device.bus = "pci"
+		device.bus_path = "pci-0000:09:00.4"
+		node.pause-on-idle = "false"
+		factory.id = "18"
+		client.id = "32"
+		node.driver = "true"
+		factory.mode = "merge"
+		audio.adapt.follower = ""
+		library.name = "audioconvert/libspa-audioconvert"
+		object.id = "57"
+		node.max-latency = "8192/48000"
+	Ports:
+		iec958-stereo-output: Digital Output (S/PDIF) (type: SPDIF, priority: 0, availability unknown)
+	Active Port: iec958-stereo-output
+	Formats:
+		pcm
+
+Sink #56
+	State: SUSPENDED
+	Name: alsa_output.pci-0000_07_00.1.hdmi-stereo-extra1
+	Description: GM204 High Definition Audio Controller Digital Stereo (HDMI 2)
+	Driver: PipeWire
+	Sample Specification: s16le 2ch 48000Hz
+	Channel Map: front-left,front-right
+	Owner Module: 4294967295
+	Mute: no
+	Volume: front-left: 26496 /  40% / -23.60 dB,   front-right: 26496 /  40% / -23.60 dB
+	        balance 0.00
+	Base Volume: 65536 / 100% / 0.00 dB
+	Monitor Source: alsa_output.pci-0000_07_00.1.hdmi-stereo-extra1.monitor
+	Latency: 0 usec, configured 0 usec
+	Flags: HARDWARE DECIBEL_VOLUME LATENCY SET_FORMATS 
+	Properties:
+		object.path = "alsa:pcm:1:hdmi:1,1:playback"
+		api.alsa.path = "hdmi:1,1"
+		api.alsa.pcm.card = "1"
+		api.alsa.pcm.stream = "playback"
+		audio.channels = "2"
+		audio.position = "FL,FR"
+		device.routes = "1"
+		alsa.resolution_bits = "16"
+		device.api = "alsa"
+		device.class = "sound"
+		alsa.class = "generic"
+		alsa.subclass = "generic-mix"
+		alsa.name = "HDMI 1"
+		alsa.id = "HDMI 1"
+		alsa.subdevice = "0"
+		alsa.subdevice_name = "subdevice #0"
+		alsa.device = "7"
+		alsa.card = "1"
+		alsa.card_name = "HDA NVidia"
+		alsa.long_card_name = "HDA NVidia at 0xfc080000 irq 133"
+		alsa.driver_name = "snd_hda_intel"
+		device.profile.name = "hdmi-stereo-extra1"
+		device.profile.description = "Digital Stereo (HDMI 2)"
+		card.profile.device = "8"
+		device.id = "36"
+		factory.name = "api.alsa.pcm.sink"
+		priority.driver = "568"
+		priority.session = "568"
+		media.class = "Audio/Sink"
+		node.nick = "HDA NVidia"
+		node.name = "alsa_output.pci-0000_07_00.1.hdmi-stereo-extra1"
+		device.description = "GM204 High Definition Audio Controller Digital Stereo (HDMI 2)"
+		device.icon_name = "audio-card-hdmi"
+		device.bus = "pci"
+		device.bus_path = "pci-0000:07:00.1"
+		node.pause-on-idle = "false"
+		factory.id = "18"
+		client.id = "32"
+		node.driver = "true"
+		factory.mode = "merge"
+		audio.adapt.follower = ""
+		library.name = "audioconvert/libspa-audioconvert"
+		object.id = "56"
+		node.max-latency = "8192/48000"
+	Ports:
+		hdmi-output-1: HDMI / DisplayPort 2 (type: HDMI, priority: 5800, availability group: Legacy 2, available)
+	Active Port: hdmi-output-1
+	Formats:
+		pcm
+
+Source #65593
+	State: SUSPENDED
+	Name: alsa_output.pci-0000_09_00.4.iec958-stereo.monitor
+	Description: Monitor of Starship/Matisse HD Audio Controller Digital Stereo (IEC958)
+	Driver: PipeWire
+	Sample Specification: s16le 2ch 48000Hz
+	Channel Map: front-left,front-right
+	Owner Module: 4294967295
+	Mute: no
+	Volume: front-left: 65536 / 100% / 0.00 dB,   front-right: 65536 / 100% / 0.00 dB
+	        balance 0.00
+	Base Volume: 65536 / 100% / 0.00 dB
+	Monitor of Sink: alsa_output.pci-0000_09_00.4.iec958-stereo
+	Latency: 0 usec, configured 0 usec
+	Flags: HARDWARE DECIBEL_VOLUME LATENCY 
+	Properties:
+		object.path = "alsa:pcm:2:iec958:2:playback"
+		api.alsa.path = "iec958:2"
+		api.alsa.pcm.card = "2"
+		api.alsa.pcm.stream = "playback"
+		audio.channels = "2"
+		audio.position = "FL,FR"
+		device.routes = "1"
+		alsa.resolution_bits = "16"
+		device.api = "alsa"
+		device.class = "sound"
+		alsa.class = "generic"
+		alsa.subclass = "generic-mix"
+		alsa.name = "ALC1220 Digital"
+		alsa.id = "ALC1220 Digital"
+		alsa.subdevice = "0"
+		alsa.subdevice_name = "subdevice #0"
+		alsa.device = "1"
+		alsa.card = "2"
+		alsa.card_name = "HD-Audio Generic"
+		alsa.long_card_name = "HD-Audio Generic at 0xfc800000 irq 135"
+		alsa.driver_name = "snd_hda_intel"
+		device.profile.name = "iec958-stereo"
+		device.profile.description = "Digital Stereo (IEC958)"
+		card.profile.device = "11"
+		device.id = "42"
+		factory.name = "api.alsa.pcm.sink"
+		priority.driver = "608"
+		priority.session = "608"
+		media.class = "Audio/Sink"
+		node.nick = "HD-Audio Generic"
+		node.name = "alsa_output.pci-0000_09_00.4.iec958-stereo"
+		device.description = "Starship/Matisse HD Audio Controller Digital Stereo (IEC958)"
+		device.icon_name = "audio-card-iec958"
+		device.bus = "pci"
+		device.bus_path = "pci-0000:09:00.4"
+		node.pause-on-idle = "false"
+		factory.id = "18"
+		client.id = "32"
+		node.driver = "true"
+		factory.mode = "merge"
+		audio.adapt.follower = ""
+		library.name = "audioconvert/libspa-audioconvert"
+		object.id = "57"
+		node.max-latency = "8192/48000"
+	Formats:
+		pcm
+
+Source #55
+	State: SUSPENDED
+	Name: alsa_input.usb-046d_HD_Pro_Webcam_C920_0FD2D4BF-02.analog-stereo
+	Description: C920 HD Pro Webcam Analog Stereo
+	Driver: PipeWire
+	Sample Specification: s16le 2ch 32000Hz
+	Channel Map: front-left,front-right
+	Owner Module: 4294967295
+	Mute: no
+	Volume: front-left: 47195 /  72% / -8.56 dB,   front-right: 47195 /  72% / -8.56 dB
+	        balance 0.00
+	Base Volume: 9619 /  15% / -50.00 dB
+	Monitor of Sink: n/a
+	Latency: 0 usec, configured 0 usec
+	Flags: HARDWARE HW_MUTE_CTRL HW_VOLUME_CTRL DECIBEL_VOLUME LATENCY 
+	Properties:
+		object.path = "alsa:pcm:0:front:0:capture"
+		api.alsa.path = "front:0"
+		api.alsa.pcm.card = "0"
+		api.alsa.pcm.stream = "capture"
+		audio.channels = "2"
+		audio.position = "FL,FR"
+		device.routes = "1"
+		alsa.resolution_bits = "16"
+		device.api = "alsa"
+		device.class = "sound"
+		alsa.class = "generic"
+		alsa.subclass = "generic-mix"
+		alsa.name = "USB Audio"
+		alsa.id = "USB Audio"
+		alsa.subdevice = "0"
+		alsa.subdevice_name = "subdevice #0"
+		alsa.device = "0"
+		alsa.card = "0"
+		alsa.card_name = "HD Pro Webcam C920"
+		alsa.long_card_name = "HD Pro Webcam C920 at usb-0000:02:00.0-10, high speed"
+		alsa.driver_name = "snd_usb_audio"
+		device.profile.name = "analog-stereo"
+		device.profile.description = "Analog Stereo"
+		card.profile.device = "0"
+		device.id = "35"
+		factory.name = "api.alsa.pcm.source"
+		priority.driver = "2009"
+		priority.session = "2009"
+		media.class = "Audio/Source"
+		node.nick = "HD Pro Webcam C920"
+		node.name = "alsa_input.usb-046d_HD_Pro_Webcam_C920_0FD2D4BF-02.analog-stereo"
+		device.description = "C920 HD Pro Webcam Analog Stereo"
+		device.icon_name = "audio-input-microphone-analog"
+		device.bus = "usb"
+		device.bus_path = "pci-0000:02:00.0-usb-0:10:1.2"
+		device.form_factor = "webcam"
+		node.pause-on-idle = "false"
+		factory.id = "18"
+		client.id = "32"
+		node.driver = "true"
+		factory.mode = "split"
+		audio.adapt.follower = ""
+		library.name = "audioconvert/libspa-audioconvert"
+		object.id = "55"
+		node.max-latency = "65536/32000"
+	Ports:
+		analog-input-mic: Microphone (type: Mic, priority: 8700, availability unknown)
+	Active Port: analog-input-mic
+	Formats:
+		pcm
+
+Source #65592
+	State: SUSPENDED
+	Name: alsa_output.pci-0000_07_00.1.hdmi-stereo-extra1.monitor
+	Description: Monitor of GM204 High Definition Audio Controller Digital Stereo (HDMI 2)
+	Driver: PipeWire
+	Sample Specification: s16le 2ch 48000Hz
+	Channel Map: front-left,front-right
+	Owner Module: 4294967295
+	Mute: no
+	Volume: front-left: 65536 / 100% / 0.00 dB,   front-right: 65536 / 100% / 0.00 dB
+	        balance 0.00
+	Base Volume: 65536 / 100% / 0.00 dB
+	Monitor of Sink: alsa_output.pci-0000_07_00.1.hdmi-stereo-extra1
+	Latency: 0 usec, configured 0 usec
+	Flags: HARDWARE DECIBEL_VOLUME LATENCY 
+	Properties:
+		object.path = "alsa:pcm:1:hdmi:1,1:playback"
+		api.alsa.path = "hdmi:1,1"
+		api.alsa.pcm.card = "1"
+		api.alsa.pcm.stream = "playback"
+		audio.channels = "2"
+		audio.position = "FL,FR"
+		device.routes = "1"
+		alsa.resolution_bits = "16"
+		device.api = "alsa"
+		device.class = "sound"
+		alsa.class = "generic"
+		alsa.subclass = "generic-mix"
+		alsa.name = "HDMI 1"
+		alsa.id = "HDMI 1"
+		alsa.subdevice = "0"
+		alsa.subdevice_name = "subdevice #0"
+		alsa.device = "7"
+		alsa.card = "1"
+		alsa.card_name = "HDA NVidia"
+		alsa.long_card_name = "HDA NVidia at 0xfc080000 irq 133"
+		alsa.driver_name = "snd_hda_intel"
+		device.profile.name = "hdmi-stereo-extra1"
+		device.profile.description = "Digital Stereo (HDMI 2)"
+		card.profile.device = "8"
+		device.id = "36"
+		factory.name = "api.alsa.pcm.sink"
+		priority.driver = "568"
+		priority.session = "568"
+		media.class = "Audio/Sink"
+		node.nick = "HDA NVidia"
+		node.name = "alsa_output.pci-0000_07_00.1.hdmi-stereo-extra1"
+		device.description = "GM204 High Definition Audio Controller Digital Stereo (HDMI 2)"
+		device.icon_name = "audio-card-hdmi"
+		device.bus = "pci"
+		device.bus_path = "pci-0000:07:00.1"
+		node.pause-on-idle = "false"
+		factory.id = "18"
+		client.id = "32"
+		node.driver = "true"
+		factory.mode = "merge"
+		audio.adapt.follower = ""
+		library.name = "audioconvert/libspa-audioconvert"
+		object.id = "56"
+		node.max-latency = "8192/48000"
+	Formats:
+		pcm
+
+Client #31
+	Driver: PipeWire
+	Owner Module: 2
+	Properties:
+		pipewire.protocol = "protocol-native"
+		pipewire.sec.pid = "8662"
+		pipewire.sec.uid = "1000"
+		pipewire.sec.gid = "1000"
+		pipewire.sec.label = "hex:0ebe30981656000076c1068c287f0000d80130981656000028639befff7f00006100000000000000e776068c287f00000100000000000000002d2b59ba0eeac620639befff7f000090629befff7f000020639befff7f0000b777068c287f000090629befff7f00006081068c287f00006c0000000000000068a73098165600009300000000000000daee078c287f000030649befff7f0000d081068c287f00000000000000000000002d2b59ba0eeac620639befff7f000020639befff7f000020639befff7f0000ed81068c287f000020649befff7f0000002d2b59ba0eeac6a0649befff7f000030649befff7f0000a0649befff7f0000b777068c287f000000000000000000001dcd068c287f00000b0000000000000020649befff7f0000990000000300000000000000000000000000000000000000002d2b59ba0eeac6000000000000000073000000ff7f000020649befff7f0000002d2b59ba0eeac60ebe309816560000a77b068c287f00000ebe309816560000b777068c287f000020649befff7f0000002d2b59ba0eeac620649befff7f0000c0b9319816560000180000003000000090659befff7f0000c0649befff7f0000002d2b59ba0eeac6c8b931981656000028669befff7f00000000000000000000c0b931981656000020649befff7f0000a0649befff7f0000730000000000000036d4068c287f0000c0b931981656000000006000287f00006c00000000000000c8b9319816560000980000000000000010ba3198165600001e00000000000000807d098c287f00000000000000000000002d2b59ba0eeac600000000000000009e31af99287f000073000000000000000000000000000000010000000000000074d5068c287f00003000000000000000002d2b59ba0eeac603000000ff7f000090a530981656000070e42f9816560000020000000000000010ad3098165600000000000000000000c0af309816560000002d2b59ba0eeac67c0000007700000090a530981656000070e42f9816560000020000000000000010ad3098165600000000000000000000c0af309816560000a081078c287f00000200000000000000b286b699287f00000b00000000000000080000000100000070659befff7f000020000000ffffffff10ad30981656000058ab508c287f000001000000f022309816560000287f00000100000000000000002d2b59ba0eeac670154f8c287f000010ad309816560000010000000000000001ad30981656000070a3309816560000d5fd058c287f000038669befff7f000070e42f9816560000c0b931981656000060f4058c287f000070e42f9816560000c230068c287f0000000000000000000048ad30981656000001000000165600000100000000000000a079098c287f0000e0af309816560000"
+		module.id = "2"
+		object.id = "31"
+		config.prefix = "media-session.d"
+		config.name = "media-session.conf"
+		cpu.max-align = "32"
+		default.clock.rate = "48000"
+		default.clock.allowed-rates = "[ 48000 ]"
+		default.clock.quantum = "1024"
+		default.clock.min-quantum = "32"
+		default.clock.max-quantum = "8192"
+		default.video.width = "640"
+		default.video.height = "480"
+		default.video.rate.num = "25"
+		default.video.rate.denom = "1"
+		log.level = "2"
+		clock.power-of-two-quantum = "true"
+		link.max-buffers = "64"
+		mem.warn-mlock = "false"
+		mem.allow-mlock = "true"
+		application.name = "pipewire-media-session"
+		application.process.binary = "pipewire-media-session"
+		application.language = "en_US.UTF-8"
+		application.process.id = "8662"
+		application.process.user = "dlipovetsky"
+		application.process.host = "bowfin"
+		window.x11.display = ":1"
+		core.version = "0.3.40"
+		core.name = "pipewire-dlipovetsky-8662"
+		pipewire.access = "unrestricted"
+
+Client #32
+	Driver: PipeWire
+	Owner Module: 2
+	Properties:
+		pipewire.protocol = "protocol-native"
+		pipewire.sec.pid = "8662"
+		pipewire.sec.uid = "1000"
+		pipewire.sec.gid = "1000"
+		pipewire.sec.label = "hex:0ebe30981656000076c1068c287f0000d80130981656000028639befff7f00006100000000000000e776068c287f00000100000000000000002d2b59ba0eeac620639befff7f000090629befff7f000020639befff7f0000b777068c287f000090629befff7f00006081068c287f00006c0000000000000068a73098165600009300000000000000daee078c287f000030649befff7f0000d081068c287f00000000000000000000002d2b59ba0eeac620639befff7f000020639befff7f000020639befff7f0000ed81068c287f000020649befff7f0000002d2b59ba0eeac6a0649befff7f000030649befff7f0000a0649befff7f0000b777068c287f000000000000000000001dcd068c287f00000b0000000000000020649befff7f0000990000000300000000000000000000000000000000000000002d2b59ba0eeac6000000000000000073000000ff7f000020649befff7f0000002d2b59ba0eeac60ebe309816560000a77b068c287f00000ebe309816560000b777068c287f000020649befff7f0000002d2b59ba0eeac620649befff7f0000c0b9319816560000180000003000000090659befff7f0000c0649befff7f0000002d2b59ba0eeac6c8b931981656000028669befff7f00000000000000000000c0b931981656000020649befff7f0000a0649befff7f0000730000000000000036d4068c287f0000c0b931981656000000006000287f00006c00000000000000c8b9319816560000980000000000000010ba3198165600001e00000000000000807d098c287f00000000000000000000002d2b59ba0eeac600000000000000009e31af99287f000073000000000000000000000000000000010000000000000074d5068c287f00003000000000000000002d2b59ba0eeac603000000ff7f000090a530981656000070e42f9816560000020000000000000010ad3098165600000000000000000000c0af309816560000002d2b59ba0eeac67c0000007700000090a530981656000070e42f9816560000020000000000000010ad3098165600000000000000000000c0af309816560000a081078c287f00000200000000000000b286b699287f00000b00000000000000080000000100000070659befff7f000020000000ffffffff10ad30981656000058ab508c287f000001000000f022309816560000287f00000100000000000000002d2b59ba0eeac670154f8c287f000010ad309816560000010000000000000001ad30981656000070a3309816560000d5fd058c287f000038669befff7f000070e42f9816560000c0b931981656000060f4058c287f000070e42f9816560000c230068c287f0000000000000000000048ad30981656000001000000165600000100000000000000a079098c287f0000e0af309816560000"
+		module.id = "2"
+		object.id = "32"
+		config.prefix = "media-session.d"
+		config.name = "media-session.conf"
+		cpu.max-align = "32"
+		default.clock.rate = "48000"
+		default.clock.allowed-rates = "[ 48000 ]"
+		default.clock.quantum = "1024"
+		default.clock.min-quantum = "32"
+		default.clock.max-quantum = "8192"
+		default.video.width = "640"
+		default.video.height = "480"
+		default.video.rate.num = "25"
+		default.video.rate.denom = "1"
+		log.level = "2"
+		clock.power-of-two-quantum = "true"
+		link.max-buffers = "64"
+		mem.warn-mlock = "false"
+		mem.allow-mlock = "true"
+		application.name = "pipewire-media-session"
+		application.process.binary = "pipewire-media-session"
+		application.language = "en_US.UTF-8"
+		application.process.id = "8662"
+		application.process.user = "dlipovetsky"
+		application.process.host = "bowfin"
+		window.x11.display = ":1"
+		core.version = "0.3.40"
+		core.name = "pipewire-dlipovetsky-8662"
+		pipewire.access = "unrestricted"
+
+Client #40
+	Driver: PipeWire
+	Owner Module: 2
+	Properties:
+		pipewire.protocol = "protocol-native"
+		pipewire.sec.pid = "8501"
+		pipewire.sec.uid = "1000"
+		pipewire.sec.gid = "1000"
+		pipewire.sec.label = "hex:98639befff7f0000000000000000000001000000287f0000e0629befff7f0000109737981656000088cd309816560000f0d6bf99287f00008affa999287f000000000000000000000700000016560000e0629befff7f00000000000000000000e3629befff7f0000e6629befff7f0000009f369816560000002d2b59ba0eeac60f0000000f00000098639befff7f0000000000000000000030cd309816560000905dbf99287f00005b452d981656000020649befff7f0000313e738b287f0000c031339816560000950a758b287f000080b3748b287f000069000000000000000000000000000000ee48738b287f00002e6d6f00287f000060f4a9990e000000a007339800000000e0629befff7f00005b452d981656000050452d981656000004000000000000000000000000000000000000000000000060bac299287f0000f559bf99287f0000020000000000000004000000040000000400000000000000b075349816560000011000000000000000bac299287f0000100001000000000001000100000000007e00000000000000db000000000000005a30af99287f00000400000000000000313e738b287f0000c031339816560000950a758b287f000080b3748b287f000069000000000000000000000000000000ee48738b287f00003000010000000000000400000e00000001100000300400001000000001000000800000000000000002000000000000007c000000790000000000000000000000a00733981656000010800000000000001000010000000000103233981656000004000000040000000c0000400000000080b53798165600000b39af99287f0000300000003000000090659befff7f0000a0649befff7f0000002d2b59ba0eeac6f010339816560000950a758b287f00000000000000000000950a758b287f00000c0000400000000000000000000000000100000000000000682133981656000010100000000000002032339816560000f0103398165600000000000000000000b075349816560000a832748b287f0000f08534981656000092a6c499287f00001000000000000000ffffffffffffffff70659befff7f0000b286b699287f000001000000000000005686748b0100000070659befff7f000020000000ffffffff403234981656000058ab508c287f000001000000f02230981656000000000000d0659befff7f00000100000040400000c0659befff7f0000048d748b287f0000400000400000000010669befff7f000050e0319816560000000000000000000020669befff7f00001c33738b287f00000000000000000000000000000000000010669befff7f000001000000000000000000000000000000000000000000000000000000000000000c00004000000000f0f0319816560000d80f000000000000"
+		module.id = "2"
+		object.id = "40"
+		client.api = "pipewire-pulse"
+		pulse.server.type = "unix"
+		application.name = "GNOME Volume Control Media Keys"
+		application.id = "org.gnome.VolumeControl"
+		application.icon_name = "multimedia-volume-control"
+		application.version = ""
+		application.process.id = "8413"
+		application.process.user = "dlipovetsky"
+		application.process.host = "bowfin"
+		application.process.binary = "gsd-media-keys"
+		application.language = "en_US.UTF-8"
+		window.x11.display = ":1"
+		application.process.machine_id = "5291e96971654ad5a804f0fc5ea6f55e"
+		config.name = "pipewire-pulse.conf"
+		cpu.max-align = "32"
+		default.clock.rate = "48000"
+		default.clock.allowed-rates = "[ 48000 ]"
+		default.clock.quantum = "1024"
+		default.clock.min-quantum = "32"
+		default.clock.max-quantum = "8192"
+		default.video.width = "640"
+		default.video.height = "480"
+		default.video.rate.num = "25"
+		default.video.rate.denom = "1"
+		log.level = "2"
+		clock.power-of-two-quantum = "true"
+		link.max-buffers = "64"
+		mem.warn-mlock = "false"
+		mem.allow-mlock = "true"
+		core.version = "0.3.40"
+		core.name = "pipewire-dlipovetsky-8501"
+		pipewire.access = "unrestricted"
+
+Client #61
+	Driver: PipeWire
+	Owner Module: 2
+	Properties:
+		pipewire.protocol = "protocol-native"
+		pipewire.sec.pid = "8760"
+		pipewire.sec.uid = "1000"
+		pipewire.sec.gid = "1000"
+		pipewire.sec.label = "hex:16be30981656000076c1068c287f0000c20000400000000028639befff7f00006100000000000000e776068c287f00000100000000000000002d2b59ba0eeac620639befff7f000090629befff7f000020639befff7f0000b777068c287f000090629befff7f00006081068c287f00006c0000000000000068a73098165600009300000000000000daee078c287f000030649befff7f0000d081068c287f00000000000000000000002d2b59ba0eeac620639befff7f000020639befff7f000020639befff7f0000ed81068c287f000020649befff7f0000002d2b59ba0eeac6a0649befff7f000030649befff7f0000a0649befff7f0000b777068c287f000000000000000000001dcd068c287f00000b0000000000000020649befff7f0000990000000300000000000000000000000000000000000000002d2b59ba0eeac6000000000000000073000000ff7f000020649befff7f0000002d2b59ba0eeac616be309816560000a77b068c287f000016be309816560000b777068c287f000020649befff7f0000002d2b59ba0eeac620649befff7f000080c6309816560000180000003000000090659befff7f0000c0649befff7f0000002d2b59ba0eeac688c630981656000028669befff7f0000000000000000000080c630981656000020649befff7f0000a0649befff7f0000730000000000000036d4068c287f000080c630981656000000006000287f00006c0000000000000088c63098165600009800000000000000d0c63098165600002600000000000000807d098c287f00000000000000000000002d2b59ba0eeac6000000000000000080c630981656000073000000000000000000000000000000e8c92f981656000074d5068c287f00003000000030000000002d2b59ba0eeac6c0649befff7f000090a530981656000000ca2f9816560000020000000000000010ad3098165600000000000000000000c0af309816560000002d2b59ba0eeac660a730981656000090a530981656000000ca2f9816560000020000000000000010ad3098165600000000000000000000c0af309816560000a081078c287f00000200000000000000b286b699287f00000000000000000000080000000100000070659befff7f000020000000ffffffff10ad30981656000058ab508c287f000001000000f022309816560000287f00000100000000000000002d2b59ba0eeac670154f8c287f000010ad309816560000010000000000000001ad30981656000070a3309816560000d5fd058c287f000038669befff7f000000ca2f981656000080c630981656000060f4058c287f000000ca2f9816560000c230068c287f0000000000000000000048ad30981656000001000000165600000100000000000000a079098c287f0000e0af309816560000"
+		module.id = "2"
+		object.id = "61"
+		pipewire.access.portal.is_portal = "true"
+		portal.monitor = "Camera"
+		log.level = "0"
+		cpu.max-align = "32"
+		default.clock.rate = "48000"
+		default.clock.allowed-rates = "[ 48000 ]"
+		default.clock.quantum = "1024"
+		default.clock.min-quantum = "32"
+		default.clock.max-quantum = "8192"
+		default.video.width = "640"
+		default.video.height = "480"
+		default.video.rate.num = "25"
+		default.video.rate.denom = "1"
+		clock.power-of-two-quantum = "true"
+		link.max-buffers = "64"
+		mem.warn-mlock = "false"
+		mem.allow-mlock = "true"
+		application.name = "xdg-desktop-portal"
+		application.process.binary = "xdg-desktop-portal"
+		application.language = "en_US.UTF-8"
+		application.process.id = "8760"
+		application.process.user = "dlipovetsky"
+		application.process.host = "bowfin"
+		window.x11.display = ":1"
+		core.version = "0.3.40"
+		core.name = "pipewire-dlipovetsky-8760"
+		pipewire.access = "unrestricted"
+
+Client #62
+	Driver: PipeWire
+	Owner Module: 2
+	Properties:
+		pipewire.protocol = "protocol-native"
+		pipewire.sec.pid = "8501"
+		pipewire.sec.uid = "1000"
+		pipewire.sec.gid = "1000"
+		pipewire.sec.label = "hex:a0e5439816560000002d2b59ba0eeac6b601004000000000c620708a287f000020e143980e0000000600000000000000000000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000e00644981656000030df43981656000040e04698165600003e0000000000000000000000000000000000000000000000c801000000000000f93f738b287f00000000000000000000002d2b59ba0eeac690344798165600005008758b287f000080b3748b287f0000313e738b287f00009034479816560000950a758b287f000080b3748b287f000069000000000000000000000000000000ee48738b287f00000000000000000000313e738b287f00009034479816560000950a758b287f000080b3748b287f000069000000000000000000000000000000ee48738b287f00000000000001000000010000000e000000100200000000000001020000000000000400000004000000313e738b287f0000e006449816560000950a758b287f000080b3748b287f0000f812708a287f0000000000000e00000004000000287f00000800000005000000313e738b287f0000c031339816560000950a758b287f000080b3748b287f000069000000000000000000000000000000ee48738b287f0000e006449816560000950a758b0e00000000000000010000003e000000000000000000000000000000ee48738b287f00003000000030000000000000000000000050649befff7f0000002d2b59ba0eeac660649befff7f00004e56708a287f000004000000040000006a0200400000000000000000000000004256708a287f0000300000003000000090659befff7f0000a0649befff7f0000002d2b59ba0eeac630669befff7f0000950a758b287f00000000000000000000950a758b287f00006a02004000000000000000000000000001000000000000009e71738b287f000030669befff7f00000000000000000000300000003000000000669befff7f000010659befff7f0000002d2b59ba0eeac600f000000000000092a6c499287f00001000000000000000ffffffffffffffff70659befff7f0000b286b699287f000001000000000000005686748b0100000070659befff7f000020000000ffffffff403234981656000058ab508c287f000001000000f02230981656000000000000d0659befff7f00000100000040400000c0659befff7f0000048d748b287f0000400000400000000010669befff7f00008021339816560000000000000000000020669befff7f00001c33738b287f00000000000000000000000000000000000010669befff7f000001000000000000000000000000000000000000000000000000000000000000006a0200400000000080b53798165600003800000000000000"
+		module.id = "2"
+		object.id = "62"
+		client.api = "pipewire-pulse"
+		pulse.server.type = "unix"
+		application.name = "libcanberra"
+		application.version = "0.30"
+		application.id = "org.freedesktop.libcanberra"
+		application.process.id = "9606"
+		application.process.user = "dlipovetsky"
+		application.process.host = "bowfin"
+		application.process.binary = "kitty"
+		application.language = "en_US.UTF-8"
+		window.x11.display = ":1"
+		application.process.machine_id = "5291e96971654ad5a804f0fc5ea6f55e"
+		config.name = "pipewire-pulse.conf"
+		cpu.max-align = "32"
+		default.clock.rate = "48000"
+		default.clock.allowed-rates = "[ 48000 ]"
+		default.clock.quantum = "1024"
+		default.clock.min-quantum = "32"
+		default.clock.max-quantum = "8192"
+		default.video.width = "640"
+		default.video.height = "480"
+		default.video.rate.num = "25"
+		default.video.rate.denom = "1"
+		log.level = "2"
+		clock.power-of-two-quantum = "true"
+		link.max-buffers = "64"
+		mem.warn-mlock = "false"
+		mem.allow-mlock = "true"
+		core.version = "0.3.40"
+		core.name = "pipewire-dlipovetsky-8501"
+		pipewire.access = "unrestricted"
+
+Client #63
+	Driver: PipeWire
+	Owner Module: 2
+	Properties:
+		pipewire.protocol = "protocol-native"
+		pipewire.sec.pid = "8501"
+		pipewire.sec.uid = "1000"
+		pipewire.sec.gid = "1000"
+		pipewire.sec.label = "hex:0ebe30981656000076c1068c287f0000000000000000000028639befff7f00006100000000000000e776068c287f00000100000016560000002d2b59ba0eeac620639befff7f000090629befff7f000020639befff7f0000b777068c287f000090629befff7f00006081068c287f00006c0000000000000068a73098165600009300000000000000daee078c287f000030649befff7f0000d081068c287f00000000000000000000002d2b59ba0eeac620639befff7f000020639befff7f000020639befff7f0000ed81068c287f000020649befff7f0000002d2b59ba0eeac6a0649befff7f000030649befff7f0000a0649befff7f0000b777068c287f000000000000000000001dcd068c287f00000b0000000000000020649befff7f0000990000000300000000000000000000000000000000000000002d2b59ba0eeac6000000000000000073000000ff7f000020649befff7f0000002d2b59ba0eeac60ebe309816560000a77b068c287f00000ebe309816560000b777068c287f000020649befff7f0000002d2b59ba0eeac620649befff7f000080c6309816560000180000003000000090659befff7f0000c0649befff7f0000002d2b59ba0eeac688c630981656000028669befff7f0000000000000000000080c630981656000020649befff7f0000a0649befff7f0000730000000000000036d4068c287f000080c630981656000000006000287f00006c0000000000000088c63098165600009800000000000000d0c63098165600001e00000000000000807d098c287f00000000000000000000002d2b59ba0eeac6000000000000000080c63098165600007300000000000000000000000000000000ca2f981656000074d5068c287f00003000000030000000002d2b59ba0eeac6c0649befff7f000090a5309816560000a0c92f9816560000020000000000000010ad3098165600000000000000000000c0af309816560000002d2b59ba0eeac660a730981656000090a5309816560000a0c92f9816560000020000000000000010ad3098165600000000000000000000c0af309816560000a081078c287f00000200000000000000b286b699287f00000000000000000000080000000100000070659befff7f000020000000ffffffff10ad30981656000058ab508c287f000001000000f022309816560000287f00000100000000000000002d2b59ba0eeac670154f8c287f000010ad309816560000010000000000000001ad30981656000070a3309816560000d5fd058c287f000038669befff7f0000a0c92f981656000080c630981656000060f4058c287f0000a0c92f9816560000c230068c287f0000000000000000000048ad30981656000001000000165600000100000000000000a079098c287f0000e0af309816560000"
+		module.id = "2"
+		object.id = "63"
+		client.api = "pipewire-pulse"
+		pulse.server.type = "unix"
+		application.name = "Microsoft Edge input"
+		application.process.id = "17751"
+		application.process.user = "dlipovetsky"
+		application.process.host = "bowfin"
+		application.process.binary = "msedge"
+		application.language = "en_US.UTF-8"
+		window.x11.display = ":1"
+		application.process.machine_id = "5291e96971654ad5a804f0fc5ea6f55e"
+		config.name = "pipewire-pulse.conf"
+		cpu.max-align = "32"
+		default.clock.rate = "48000"
+		default.clock.allowed-rates = "[ 48000 ]"
+		default.clock.quantum = "1024"
+		default.clock.min-quantum = "32"
+		default.clock.max-quantum = "8192"
+		default.video.width = "640"
+		default.video.height = "480"
+		default.video.rate.num = "25"
+		default.video.rate.denom = "1"
+		log.level = "2"
+		clock.power-of-two-quantum = "true"
+		link.max-buffers = "64"
+		mem.warn-mlock = "false"
+		mem.allow-mlock = "true"
+		core.version = "0.3.40"
+		core.name = "pipewire-dlipovetsky-8501"
+		pipewire.access = "unrestricted"
+
+Client #60
+	Driver: PipeWire
+	Owner Module: 2
+	Properties:
+		pipewire.protocol = "protocol-native"
+		pipewire.sec.pid = "8501"
+		pipewire.sec.uid = "1000"
+		pipewire.sec.gid = "1000"
+		pipewire.sec.label = "hex:c8b233981656000058b3339816560000a00000000f000000000000000000000000000000000000000000000000000000c8b2339816560000a800000000000000a80000000000000030629befff7f00000100000001000000060200000000000080bb000002000000030000000400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000313e738b287f0000c031339816560000950a758b287f000080b3748b287f000069000000000000000000000000000000313e738b287f0000c031339816560000950a758b287f000080b3748b287f000069000000000000000000000000000000ee48738b287f00000000000000000000000000000e000000c031339816560000950a758b287f000080b3748b287f000069000000000000000400000004000000313e738b287f0000d0644b9816560000950a758b287f000080b3748b287f0000f812708a287f0000000000000e00000004000000287f00001800000000000000313e738b287f0000c031339816560000950a758b287f000080b3748b287f000069000000000000000000000000000000ee48738b287f0000d0644b9816560000950a758b0e00000000000000010000003c000000000000000000000000000000ee48738b287f00003000000030000000000000000000000050649befff7f0000002d2b59ba0eeac660649befff7f00004e56708a287f00000400000004000000741400400000000000000000000000004256708a287f0000300000003000000090659befff7f0000a0649befff7f0000002d2b59ba0eeac630669befff7f0000950a758b287f00000000000000000000950a758b287f00007414004000000000000000000000000001000000000000009e71738b287f000030669befff7f00000000000000000000300000003000000000669befff7f000010659befff7f0000002d2b59ba0eeac6310000000000000092a6c499287f00001000000000000000ffffffffffffffff70659befff7f0000b286b699287f000001000000000000005686748b0100000070659befff7f000020000000ffffffff403234981656000058ab508c287f000001000000f02230981656000000000000d0659befff7f00000100000040400000c0659befff7f0000048d748b287f0000400000400000000010669befff7f00008021339816560000000000000000000020669befff7f00001c33738b287f00000000000000000000000000000000000010669befff7f00000100000000000000000000000000000000000000000000000000000000000000741400400000000080b53798165600003800000000000000"
+		module.id = "2"
+		object.id = "60"
+		client.api = "pipewire-pulse"
+		pulse.server.type = "unix"
+		application.name = "polybar"
+		application.process.id = "8720"
+		application.process.user = "dlipovetsky"
+		application.process.host = "bowfin"
+		application.process.binary = "polybar"
+		application.language = "C"
+		window.x11.display = ":1"
+		application.process.machine_id = "5291e96971654ad5a804f0fc5ea6f55e"
+		config.name = "pipewire-pulse.conf"
+		cpu.max-align = "32"
+		default.clock.rate = "48000"
+		default.clock.allowed-rates = "[ 48000 ]"
+		default.clock.quantum = "1024"
+		default.clock.min-quantum = "32"
+		default.clock.max-quantum = "8192"
+		default.video.width = "640"
+		default.video.height = "480"
+		default.video.rate.num = "25"
+		default.video.rate.denom = "1"
+		log.level = "2"
+		clock.power-of-two-quantum = "true"
+		link.max-buffers = "64"
+		mem.warn-mlock = "false"
+		mem.allow-mlock = "true"
+		core.version = "0.3.40"
+		core.name = "pipewire-dlipovetsky-8501"
+		pipewire.access = "unrestricted"
+
+Client #59
+	Driver: PipeWire
+	Owner Module: 2
+	Properties:
+		pipewire.protocol = "protocol-native"
+		pipewire.sec.pid = "8501"
+		pipewire.sec.uid = "1000"
+		pipewire.sec.gid = "1000"
+		pipewire.sec.label = "hex:b8926e981656000000000000000000000000000000000000f93f738b287f00000000000000000000002d2b59ba0eeac6a03f3598165600005008758b287f000080b3748b287f000073000000000000000000000000000000f453738b287f000000000000000000003352db890e000000b8926e981656000058e23e98165600000000000000000000daee078c287f000030649befff7f0000d081068c287f0000000000000000000068c29398165600000200000000000000489e94981656000000000000010000000100000000000000b896949816560000002d2b59ba0eeac6a0649befff7f000030649befff7f0000a0649befff7f0000b777068c287f000000000000000000001dcd068c287f0000390000000000000020649befff7f0000400000000300000000000000000000000000000000000000313e738b287f00000c00000000000000730000001656000000649befff7f000088000000000000000000000000000000a77b068c287f00000000000000000000313e738b287f000020649befff7f0000002d2b59ba0eeac620649befff7f000080c63098165600001800000030000000313e738b287f0000a03f359816560000950a758b287f000080b3748b287f000069000000000000000000000000000000ee48738b287f000020649befff7f0000a0649bef0e000000730000000000000036d4068c287f000080c630981656000000006000ba0eeac66c0000000000000000000000000000009800000000000000d0c63098165600003d00000000000000807d098c287f000004000000040000001703004000000000000000000000000080c6309816560000300000003000000090659befff7f0000a0649befff7f0000002d2b59ba0eeac63000000000000000950a758b287f00000000000000000000950a758b287f00001703004000000000000000000000000001000000000000009e71738b287f000030669befff7f0000002d2b59ba0eeac6300000003000000000669befff7f000010659befff7f0000002d2b59ba0eeac610ad30981656000092a6c499287f00001000000000000000ffffffffffffffff70659befff7f0000b286b699287f000001000000000000005686748b0100000070659befff7f000020000000ffffffff504f3b981656000058ab508c287f000001000000f02230981656000000000000d0659befff7f00000100000040400000c0659befff7f0000048d748b287f0000400000400000000010669befff7f0000602f359816560000000000000000000020669befff7f00001c33738b287f00000000000000000000000000000000000010669befff7f000001000000000000000000000000000000000000000000000000000000000000001703004000000000d00e4898165600007000000000000000"
+		module.id = "2"
+		object.id = "59"
+		client.api = "pipewire-pulse"
+		pulse.server.type = "unix"
+		application.process.id = "66521"
+		application.process.user = "dlipovetsky"
+		application.process.host = "bowfin"
+		application.process.binary = "pactl"
+		application.name = "pactl"
+		application.language = "en_US.UTF-8"
+		window.x11.display = ":1"
+		application.process.machine_id = "5291e96971654ad5a804f0fc5ea6f55e"
+		config.name = "pipewire-pulse.conf"
+		cpu.max-align = "32"
+		default.clock.rate = "48000"
+		default.clock.allowed-rates = "[ 48000 ]"
+		default.clock.quantum = "1024"
+		default.clock.min-quantum = "32"
+		default.clock.max-quantum = "8192"
+		default.video.width = "640"
+		default.video.height = "480"
+		default.video.rate.num = "25"
+		default.video.rate.denom = "1"
+		log.level = "2"
+		clock.power-of-two-quantum = "true"
+		link.max-buffers = "64"
+		mem.warn-mlock = "false"
+		mem.allow-mlock = "true"
+		core.version = "0.3.40"
+		core.name = "pipewire-dlipovetsky-8501"
+		pipewire.access = "unrestricted"
+
+Card #42
+	Name: alsa_card.pci-0000_09_00.4
+	Driver: alsa
+	Owner Module: n/a
+	Properties:
+		device.enum.api = "udev"
+		device.api = "alsa"
+		media.class = "Audio/Device"
+		api.alsa.path = "hw:2"
+		api.alsa.card = "2"
+		api.alsa.card.name = "HD-Audio Generic"
+		api.alsa.card.longname = "HD-Audio Generic at 0xfc800000 irq 135"
+		device.plugged.usec = "163828658"
+		device.bus_path = "pci-0000:09:00.4"
+		device.sysfs.path = "/sys/devices/pci0000:00/0000:00:08.1/0000:09:00.4/sound/card2"
+		device.bus = "pci"
+		device.subsystem = "sound"
+		device.vendor.id = "4130"
+		device.vendor.name = "Advanced Micro Devices, Inc. [AMD]"
+		device.product.id = "5255"
+		device.product.name = "Starship/Matisse HD Audio Controller"
+		device.name = "alsa_card.pci-0000_09_00.4"
+		device.description = "Starship/Matisse HD Audio Controller"
+		device.nick = "HD-Audio Generic"
+		device.icon_name = "audio-card-pci"
+		api.alsa.use-acp = "true"
+		api.acp.auto-profile = "false"
+		api.acp.auto-port = "false"
+		api.dbus.ReserveDevice1 = "Audio2"
+		factory.id = "14"
+		client.id = "31"
+		object.id = "42"
+		object.path = "alsa:pcm:2"
+		alsa.card = "2"
+		alsa.card_name = "HD-Audio Generic"
+		alsa.long_card_name = "HD-Audio Generic at 0xfc800000 irq 135"
+		alsa.driver_name = "snd_hda_intel"
+		device.string = "2"
+	Profiles:
+		off: Off (sinks: 0, sources: 0, priority: 0, available: yes)
+		output:analog-stereo+input:analog-stereo: Analog Stereo Duplex (sinks: 1, sources: 1, priority: 6565, available: no)
+		output:analog-stereo: Analog Stereo Output (sinks: 1, sources: 0, priority: 6500, available: no)
+		output:iec958-stereo+input:analog-stereo: Digital Stereo (IEC958) Output + Analog Stereo Input (sinks: 1, sources: 1, priority: 5565, available: no)
+		output:iec958-stereo: Digital Stereo (IEC958) Output (sinks: 1, sources: 0, priority: 5500, available: yes)
+		output:analog-surround-21+input:analog-stereo: Analog Surround 2.1 Output + Analog Stereo Input (sinks: 1, sources: 1, priority: 1365, available: no)
+		output:analog-surround-41+input:analog-stereo: Analog Surround 4.1 Output + Analog Stereo Input (sinks: 1, sources: 1, priority: 1365, available: no)
+		output:analog-surround-51+input:analog-stereo: Analog Surround 5.1 Output + Analog Stereo Input (sinks: 1, sources: 1, priority: 1365, available: no)
+		output:analog-surround-21: Analog Surround 2.1 Output (sinks: 1, sources: 0, priority: 1300, available: no)
+		output:analog-surround-41: Analog Surround 4.1 Output (sinks: 1, sources: 0, priority: 1300, available: no)
+		output:analog-surround-51: Analog Surround 5.1 Output (sinks: 1, sources: 0, priority: 1300, available: no)
+		output:analog-surround-40+input:analog-stereo: Analog Surround 4.0 Output + Analog Stereo Input (sinks: 1, sources: 1, priority: 1265, available: no)
+		output:analog-surround-50+input:analog-stereo: Analog Surround 5.0 Output + Analog Stereo Input (sinks: 1, sources: 1, priority: 1265, available: no)
+		output:analog-surround-40: Analog Surround 4.0 Output (sinks: 1, sources: 0, priority: 1200, available: no)
+		output:analog-surround-50: Analog Surround 5.0 Output (sinks: 1, sources: 0, priority: 1200, available: no)
+		input:analog-stereo: Analog Stereo Input (sinks: 0, sources: 1, priority: 65, available: no)
+		pro-audio: Pro Audio (sinks: 2, sources: 2, priority: 1, available: yes)
+	Active Profile: output:iec958-stereo
+	Ports:
+		analog-input-front-mic: Front Microphone (type: Mic, priority: 8500, latency offset: 0 usec, availability group: Legacy 1, not available)
+			Properties:
+				port.type = "mic"
+				port.availability-group = "Legacy 1"
+				device.icon_name = "audio-input-microphone"
+				card.profile.port = "0"
+			Part of profile(s): input:analog-stereo, output:analog-stereo+input:analog-stereo, output:analog-surround-21+input:analog-stereo, output:analog-surround-40+input:analog-stereo, output:analog-surround-41+input:analog-stereo, output:analog-surround-50+input:analog-stereo, output:analog-surround-51+input:analog-stereo, output:iec958-stereo+input:analog-stereo
+		analog-input-rear-mic: Rear Microphone (type: Mic, priority: 8200, latency offset: 0 usec, availability group: Legacy 2, not available)
+			Properties:
+				port.type = "mic"
+				port.availability-group = "Legacy 2"
+				device.icon_name = "audio-input-microphone"
+				card.profile.port = "1"
+			Part of profile(s): input:analog-stereo, output:analog-stereo+input:analog-stereo, output:analog-surround-21+input:analog-stereo, output:analog-surround-40+input:analog-stereo, output:analog-surround-41+input:analog-stereo, output:analog-surround-50+input:analog-stereo, output:analog-surround-51+input:analog-stereo, output:iec958-stereo+input:analog-stereo
+		analog-input-linein: Line In (type: Line, priority: 8100, latency offset: 0 usec, availability group: Legacy 3, not available)
+			Properties:
+				port.type = "line"
+				port.availability-group = "Legacy 3"
+				card.profile.port = "2"
+			Part of profile(s): input:analog-stereo, output:analog-stereo+input:analog-stereo, output:analog-surround-21+input:analog-stereo, output:analog-surround-40+input:analog-stereo, output:analog-surround-41+input:analog-stereo, output:analog-surround-50+input:analog-stereo, output:analog-surround-51+input:analog-stereo, output:iec958-stereo+input:analog-stereo
+		analog-output-lineout: Line Out (type: Line, priority: 9000, latency offset: 0 usec, availability group: Legacy 4, not available)
+			Properties:
+				port.type = "line"
+				port.availability-group = "Legacy 4"
+				card.profile.port = "3"
+			Part of profile(s): output:analog-stereo, output:analog-stereo+input:analog-stereo, output:analog-surround-21, output:analog-surround-21+input:analog-stereo, output:analog-surround-40, output:analog-surround-40+input:analog-stereo, output:analog-surround-41, output:analog-surround-41+input:analog-stereo, output:analog-surround-50, output:analog-surround-50+input:analog-stereo, output:analog-surround-51, output:analog-surround-51+input:analog-stereo
+		analog-output-headphones: Headphones (type: Headphones, priority: 9900, latency offset: 0 usec, availability group: Legacy 5, not available)
+			Properties:
+				port.type = "headphones"
+				port.availability-group = "Legacy 5"
+				device.icon_name = "audio-headphones"
+				card.profile.port = "4"
+			Part of profile(s): output:analog-stereo, output:analog-stereo+input:analog-stereo
+		iec958-stereo-output: Digital Output (S/PDIF) (type: SPDIF, priority: 0, latency offset: 0 usec, availability unknown)
+			Properties:
+				port.type = "spdif"
+				card.profile.port = "5"
+			Part of profile(s): output:iec958-stereo, output:iec958-stereo+input:analog-stereo
+
+Card #35
+	Name: alsa_card.usb-046d_HD_Pro_Webcam_C920_0FD2D4BF-02
+	Driver: alsa
+	Owner Module: n/a
+	Properties:
+		device.enum.api = "udev"
+		device.api = "alsa"
+		media.class = "Audio/Device"
+		api.alsa.path = "hw:0"
+		api.alsa.card = "0"
+		api.alsa.card.name = "HD Pro Webcam C920"
+		api.alsa.card.longname = "HD Pro Webcam C920 at usb-0000:02:00.0-10, high speed"
+		device.plugged.usec = "164780594"
+		device.bus_path = "pci-0000:02:00.0-usb-0:10:1.2"
+		device.sysfs.path = "/sys/devices/pci0000:00/0000:00:01.2/0000:02:00.0/usb1/1-10/1-10:1.2/sound/card0"
+		device.bus-id = "usb-046d_HD_Pro_Webcam_C920_0FD2D4BF-02"
+		device.bus = "usb"
+		device.subsystem = "sound"
+		device.vendor.id = "1133"
+		device.vendor.name = "Logitech, Inc."
+		device.product.id = "2194"
+		device.product.name = "C920 HD Pro Webcam"
+		device.serial = "046d_HD_Pro_Webcam_C920_0FD2D4BF"
+		device.form_factor = "webcam"
+		device.name = "alsa_card.usb-046d_HD_Pro_Webcam_C920_0FD2D4BF-02"
+		device.description = "C920 HD Pro Webcam"
+		device.nick = "HD Pro Webcam C920"
+		device.icon_name = "camera-web-usb"
+		api.alsa.use-acp = "true"
+		api.acp.auto-profile = "false"
+		api.acp.auto-port = "false"
+		api.dbus.ReserveDevice1 = "Audio0"
+		factory.id = "14"
+		client.id = "31"
+		object.id = "35"
+		object.path = "alsa:pcm:0"
+		alsa.card = "0"
+		alsa.card_name = "HD Pro Webcam C920"
+		alsa.long_card_name = "HD Pro Webcam C920 at usb-0000:02:00.0-10, high speed"
+		alsa.driver_name = "snd_usb_audio"
+		device.string = "0"
+	Profiles:
+		off: Off (sinks: 0, sources: 0, priority: 0, available: yes)
+		input:analog-stereo: Analog Stereo Input (sinks: 0, sources: 1, priority: 65, available: yes)
+		input:iec958-stereo: Digital Stereo (IEC958) Input (sinks: 0, sources: 1, priority: 55, available: yes)
+		pro-audio: Pro Audio (sinks: 0, sources: 1, priority: 1, available: yes)
+	Active Profile: input:analog-stereo
+	Ports:
+		analog-input-mic: Microphone (type: Mic, priority: 8700, latency offset: 0 usec, availability unknown)
+			Properties:
+				port.type = "mic"
+				device.icon_name = "audio-input-microphone"
+				card.profile.port = "0"
+			Part of profile(s): input:analog-stereo
+		iec958-stereo-input: Digital Input (S/PDIF) (type: SPDIF, priority: 0, latency offset: 0 usec, availability unknown)
+			Properties:
+				port.type = "spdif"
+				card.profile.port = "1"
+			Part of profile(s): input:iec958-stereo
+
+Card #36
+	Name: alsa_card.pci-0000_07_00.1
+	Driver: alsa
+	Owner Module: n/a
+	Properties:
+		device.enum.api = "udev"
+		device.api = "alsa"
+		media.class = "Audio/Device"
+		api.alsa.path = "hw:1"
+		api.alsa.card = "1"
+		api.alsa.card.name = "HDA NVidia"
+		api.alsa.card.longname = "HDA NVidia at 0xfc080000 irq 133"
+		device.plugged.usec = "163805001"
+		device.bus_path = "pci-0000:07:00.1"
+		device.sysfs.path = "/sys/devices/pci0000:00/0000:00:03.1/0000:07:00.1/sound/card1"
+		device.bus = "pci"
+		device.subsystem = "sound"
+		device.vendor.id = "4318"
+		device.vendor.name = "NVIDIA Corporation"
+		device.product.id = "4027"
+		device.product.name = "GM204 High Definition Audio Controller"
+		device.name = "alsa_card.pci-0000_07_00.1"
+		device.description = "GM204 High Definition Audio Controller"
+		device.nick = "HDA NVidia"
+		device.icon_name = "audio-card-pci"
+		api.alsa.use-acp = "true"
+		api.acp.auto-profile = "false"
+		api.acp.auto-port = "false"
+		api.dbus.ReserveDevice1 = "Audio1"
+		factory.id = "14"
+		client.id = "31"
+		object.id = "36"
+		object.path = "alsa:pcm:1"
+		alsa.card = "1"
+		alsa.card_name = "HDA NVidia"
+		alsa.long_card_name = "HDA NVidia at 0xfc080000 irq 133"
+		alsa.driver_name = "snd_hda_intel"
+		device.string = "1"
+	Profiles:
+		off: Off (sinks: 0, sources: 0, priority: 0, available: yes)
+		output:hdmi-stereo: Digital Stereo (HDMI) Output (sinks: 1, sources: 0, priority: 5900, available: yes)
+		output:hdmi-stereo-extra1: Digital Stereo (HDMI 2) Output (sinks: 1, sources: 0, priority: 5700, available: yes)
+		output:hdmi-stereo-extra2: Digital Stereo (HDMI 3) Output (sinks: 1, sources: 0, priority: 5700, available: no)
+		output:hdmi-stereo-extra3: Digital Stereo (HDMI 4) Output (sinks: 1, sources: 0, priority: 5700, available: no)
+		output:hdmi-stereo-extra4: Digital Stereo (HDMI 5) Output (sinks: 1, sources: 0, priority: 5700, available: no)
+		output:hdmi-stereo-extra5: Digital Stereo (HDMI 6) Output (sinks: 1, sources: 0, priority: 5700, available: no)
+		output:hdmi-stereo-extra6: Digital Stereo (HDMI 7) Output (sinks: 1, sources: 0, priority: 5700, available: no)
+		output:hdmi-surround-extra2: Digital Surround 5.1 (HDMI 3) Output (sinks: 1, sources: 0, priority: 600, available: no)
+		output:hdmi-surround71-extra2: Digital Surround 7.1 (HDMI 3) Output (sinks: 1, sources: 0, priority: 600, available: no)
+		output:hdmi-surround-extra3: Digital Surround 5.1 (HDMI 4) Output (sinks: 1, sources: 0, priority: 600, available: no)
+		output:hdmi-surround71-extra3: Digital Surround 7.1 (HDMI 4) Output (sinks: 1, sources: 0, priority: 600, available: no)
+		output:hdmi-surround-extra4: Digital Surround 5.1 (HDMI 5) Output (sinks: 1, sources: 0, priority: 600, available: no)
+		output:hdmi-surround71-extra4: Digital Surround 7.1 (HDMI 5) Output (sinks: 1, sources: 0, priority: 600, available: no)
+		output:hdmi-surround-extra5: Digital Surround 5.1 (HDMI 6) Output (sinks: 1, sources: 0, priority: 600, available: no)
+		output:hdmi-surround71-extra5: Digital Surround 7.1 (HDMI 6) Output (sinks: 1, sources: 0, priority: 600, available: no)
+		output:hdmi-surround-extra6: Digital Surround 5.1 (HDMI 7) Output (sinks: 1, sources: 0, priority: 600, available: no)
+		output:hdmi-surround71-extra6: Digital Surround 7.1 (HDMI 7) Output (sinks: 1, sources: 0, priority: 600, available: no)
+		pro-audio: Pro Audio (sinks: 7, sources: 0, priority: 1, available: yes)
+	Active Profile: output:hdmi-stereo-extra1
+	Ports:
+		hdmi-output-0: HDMI / DisplayPort (type: HDMI, priority: 5900, latency offset: 0 usec, availability group: Legacy 1, available)
+			Properties:
+				port.type = "hdmi"
+				port.availability-group = "Legacy 1"
+				device.icon_name = "video-display"
+				card.profile.port = "0"
+			Part of profile(s): output:hdmi-stereo
+		hdmi-output-1: HDMI / DisplayPort 2 (type: HDMI, priority: 5800, latency offset: 0 usec, availability group: Legacy 2, available)
+			Properties:
+				port.type = "hdmi"
+				port.availability-group = "Legacy 2"
+				device.icon_name = "video-display"
+				card.profile.port = "1"
+			Part of profile(s): output:hdmi-stereo-extra1
+		hdmi-output-2: HDMI / DisplayPort 3 (type: HDMI, priority: 5700, latency offset: 0 usec, availability group: Legacy 3, not available)
+			Properties:
+				port.type = "hdmi"
+				port.availability-group = "Legacy 3"
+				device.icon_name = "video-display"
+				card.profile.port = "2"
+			Part of profile(s): output:hdmi-stereo-extra2, output:hdmi-surround-extra2, output:hdmi-surround71-extra2
+		hdmi-output-3: HDMI / DisplayPort 4 (type: HDMI, priority: 5600, latency offset: 0 usec, availability group: Legacy 4, not available)
+			Properties:
+				port.type = "hdmi"
+				port.availability-group = "Legacy 4"
+				device.icon_name = "video-display"
+				card.profile.port = "3"
+			Part of profile(s): output:hdmi-stereo-extra3, output:hdmi-surround-extra3, output:hdmi-surround71-extra3
+		hdmi-output-4: HDMI / DisplayPort 5 (type: HDMI, priority: 5500, latency offset: 0 usec, availability group: Legacy 5, not available)
+			Properties:
+				port.type = "hdmi"
+				port.availability-group = "Legacy 5"
+				device.icon_name = "video-display"
+				card.profile.port = "4"
+			Part of profile(s): output:hdmi-stereo-extra4, output:hdmi-surround-extra4, output:hdmi-surround71-extra4
+		hdmi-output-5: HDMI / DisplayPort 6 (type: HDMI, priority: 5400, latency offset: 0 usec, availability group: Legacy 6, not available)
+			Properties:
+				port.type = "hdmi"
+				port.availability-group = "Legacy 6"
+				device.icon_name = "video-display"
+				card.profile.port = "5"
+			Part of profile(s): output:hdmi-stereo-extra5, output:hdmi-surround-extra5, output:hdmi-surround71-extra5
+		hdmi-output-6: HDMI / DisplayPort 7 (type: HDMI, priority: 5300, latency offset: 0 usec, availability group: Legacy 7, not available)
+			Properties:
+				port.type = "hdmi"
+				port.availability-group = "Legacy 7"
+				device.icon_name = "video-display"
+				card.profile.port = "6"
+			Part of profile(s): output:hdmi-stereo-extra6, output:hdmi-surround-extra6, output:hdmi-surround71-extra6
