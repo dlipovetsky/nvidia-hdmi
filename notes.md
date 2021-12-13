@@ -347,3 +347,29 @@ Oct 23 15:57:01 bowfin systemd[1]: Stopped Manage Sound Card State (restore and 
 
 
     ```
+
+I tried creating the udev rule, profile set, and paths, but couldn't get that to work.
+
+However, I did get the following to work:
+
+1.  Lowered the priority of the "hdmi-stereo" Mapping in the default.conf profile set to below the hdmi-stereo-extra1 priority.
+
+    Lowering the priority from 9 to 1 in the `default.conf` profile set file changed the priority reported by pactl from 5900 to 5100:
+
+    ```txt
+    Profiles:
+            off: Off (sinks: 0, sources: 0, priority: 0, available: yes)
+            output:hdmi-stereo-extra1: Digital Stereo (HDMI 2) Output (sinks: 1, sources: 0, priority: 5700, available: yes)
+            output:hdmi-stereo-extra2: Digital Stereo (HDMI 3) Output (sinks: 1, sources: 0, priority: 5700, available: no)
+            output:hdmi-stereo-extra3: Digital Stereo (HDMI 4) Output (sinks: 1, sources: 0, priority: 5700, available: no)
+            output:hdmi-stereo-extra4: Digital Stereo (HDMI 5) Output (sinks: 1, sources: 0, priority: 5700, available: no)
+            output:hdmi-stereo-extra5: Digital Stereo (HDMI 6) Output (sinks: 1, sources: 0, priority: 5700, available: no)
+            output:hdmi-stereo-extra6: Digital Stereo (HDMI 7) Output (sinks: 1, sources: 0, priority: 5700, available: no)
+            output:hdmi-stereo: Digital Stereo (HDMI) Output (sinks: 1, sources: 0, priority: 5100, available: yes)
+    ```
+
+    Lowering the priority from 59 to 1 in the `hdmi-output-0.conf` path file had no effect! This might be because, since upgrading to Fedora 34, ALSA says it can't use UCM with either of the audio cards. I really don't know.
+
+2.  Restarted both pipewire and pipewire-pulse services: `systemctl --user restart pipewire.service pipewire-pulse.service`
+
+This approach will break as soon as the `default.conf` profile set file is updated, e.g., by a package upgrade.
