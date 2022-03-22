@@ -373,3 +373,106 @@ However, I did get the following to work:
 2.  Restarted both pipewire and pipewire-pulse services: `systemctl --user restart pipewire.service pipewire-pulse.service`
 
 This approach will break as soon as the `default.conf` profile set file is updated, e.g., by a package upgrade.
+
+3.  Came back a month later, and the above did not work.
+
+    Instead, modifying the files under `/usr/share/alsa-card-profile/mixer/paths` worked.
+
+    I increased the priority in `hdmi-output-0.conf`:
+
+    ```ini
+    [General]
+    description = HDMI / DisplayPort
+    type = hdmi
+    ;priority = 59
+    priority = 159
+    eld-device = auto
+
+    [Properties]
+    device.icon_name = video-display
+
+    [Jack HDMI/DP]
+    append-pcm-to-name = yes
+    required = ignore
+    ```
+
+    And lowered it in `hdmi-output-1.conf`, which is the second HDMI output, i.e., the one I want to use by default:
+
+    ```ini
+    [General]
+    description = HDMI / DisplayPort
+    type = hdmi
+    ;priority = 58
+    priority = 8
+    eld-device = auto
+
+    [Properties]
+    device.icon_name = video-display
+
+    [Jack HDMI/DP]
+    append-pcm-to-name = yes
+    required = ignore
+    ```
+
+    This had the desired effect, as seen in `pactl`:
+
+    ```txt
+        Active Profile: output:hdmi-stereo-extra1
+        Ports:
+                hdmi-output-0: HDMI / DisplayPort (type: HDMI, priority: 15900, latency offset: 0 usec, availability group: Legacy 1, available)
+                        Properties:
+                                port.type = "hdmi"
+                                port.availability-group = "Legacy 1"
+                                device.icon_name = "video-display"
+                                card.profile.port = "0"
+                        Part of profile(s): output:hdmi-stereo
+                hdmi-output-1: HDMI / DisplayPort (type: HDMI, priority: 800, latency offset: 0 usec, availability group: Legacy 2, available)
+                        Properties:
+                                port.type = "hdmi"
+                                port.availability-group = "Legacy 2"
+                                device.icon_name = "video-display"
+                                card.profile.port = "1"
+                        Part of profile(s): output:hdmi-stereo-extra1
+    ```
+
+4.  Despite all the above, EasyEffects doesn't always recognize that the hdmi-stereo-extra1 profile is the chosen one.
+
+    To remedy, I commented out the hdmi-stereo mapping in the default.conf
+
+    ```ini
+    ;[Mapping hdmi-stereo]
+    ;description = Digital Stereo (HDMI)
+    ;device-strings = hdmi:%f
+    ;paths-output = hdmi-output-0
+    ;channel-map = left,right
+    ;priority = 1
+    ;direction = output
+    ```
+
+    Now there's just one profile that's availble, and only HDMI device shows up in the sinks list.
+
+5.  It looks like the defalt profile can be selected using pipewire-media-session
+
+    All I need to do is write a rule, see https://gitlab.freedesktop.org/pipewire/media-session/-/wikis/Config-ALSA#matching-rules.
+
+    However, this is already obsolete, and replaced by WirePlumber, which has different configuration.
+
+    If I can match the device by name, and select the default profile by name, then I should be set!
+
+6.  In Fedora 35, with WirePlumber installed, the underlying problem might not exist.
+
+    I think that the default profile is stored in `/home/dlipovetsky/.local/state/wireplumber/default-profiles`,
+    and it happens to be the right profile (`hdmi-stereo-extra1`).
+
+    ```ini
+    [default-profile]
+    alsa_card.usb-046d_HD_Pro_Webcam_C920_0FD2D4BF-02=input:iec958-stereo
+    alsa_card.pci-0000_07_00.1=output:hdmi-stereo-extra1
+    alsa_card.usb-FuZhou_Kingwayinfo_CO._LTD_TONOR_TM20_Audio_Device_20200918-00=pro-audio
+    alsa_card.pci-0000_09_00.4=output:iec958-stereo+input:analog-stereo
+    ```
+
+    I'll monitor this for a while, because I might be wrong.
+
+    Right now, I'm configuring EasyEffects to use the specific HDMI 2 output, since, given the above profile, I can
+    depend on that output always being there.
